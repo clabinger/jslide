@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+	<title>jSlide</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="./jquery.easing.min.js"></script>
+	<script type="text/javascript" src="./jslide2.js"></script>
+</head>
+<body>
+	<a name="home"></a>
+	<div id="page_wrap">
+		<div id="body_wrap">
+			<div id="title_wrap">
+				
+			<span id="title">jSlide</span>
+
+			<span id="subtitle">inline JavaScript slideshow</span>
+				
+
+			</div>
+			<div id="body_frame">
+				<div id="menu">
+					<ul>
+						<li><a href="#home">HOME</a></li> <li><a href="#demo">DEMO</a></li> <li><a href="#download">DOWNLOAD</a></li> <li><a href="#install">INSTALL</a></li> <li><a href="#settings">SETTINGS</a></li> <li><a href="#api">API</a></li> </ul>
+				</div>
+				<div id="content">
+					<p style="font-size:12pt;"><span style="font-weight:bold;color:#264B77;">jSlide</span> is a lightweight but versatile image slideshow that displays slideshows on your web page. jSlide is easy to install and completely customizable. </p>
+					<h1><a name="demo"></a>Demo</h1>
+					<div class="box_wrap">
+						<div id="slider_1" style="height:400px"></div>
+						<script type="text/javascript">
+						jslide('slider_1').setup({	
+							height: '100%',
+							scale: 'fit',
+							background:'black',
+							autoplay: true,
+							transition:1000,
+							images: [
+								['./images/1.jpg','The slideshow can be set to play automatically when the page loads.'],
+								['./images/2.jpg','The transitions can be set to any combination of fading and sliding, and the transition time adjusted.'],
+								['./images/3.jpg','If a fixed height is not given, the height of the image container changes dynamically as each image enters.'],
+								['./images/4.jpg','You can position captions top or bottom, left or right, and customize their size, color, and opacity.'],
+								['./images/5.jpg','Left/Right buttons can be customized or removed. The position of the click capture areas on the image can also be customized.'],
+								['./images/6.jpg','The arrow keys can also be used to control the slideshow.'],
+								['./images/7.jpg',''],
+								['./images/8.jpg','<b>HTML</b> <i>captions</i> <span style="color:red;">supported</span>']
+
+							],
+							controls:{
+								rounded: 7
+							},
+							captions: {
+								position: 'top',
+								width:'80%',
+								rounded: 7,
+								opacity: 0.7,
+								padding:10
+							}
+						});
+
+						</script>
+					</div>
+				
+				<h1><a name="download"></a>Download</h1>
+
+				<p>Upload this Javascript file to your server:</p>
+				<p style="margin:20px 0"><a class="button" href="jslide2.js">jSlide download</a></p>
+				<p>Click the above file to copy the text directly, or right-click and choose "Save Link As..."</p>
+
+
+
+				<h1><a name="install"></a>Install</h1>
+				<p><b>Step 1</b> - Include jQuery</p>
+				<div class="indent">
+					<p>jSlide requires jQuery to run. If you don't already have jQuery on your page, include the following line in the <code>&lt;head&gt;</code> tag:</p>
+					<p class="code">&lt;script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;</p>
+					<p>jSlide has been tested to work with jQuery 1.9.0.</p>
+				</div>	
+				<p><b>Step 2</b> - Include jSlide</p>
+				<div class="indent">
+					<p>Include the following line in the <code>&lt;head&gt;</code> tag of your page, <em>after</em> jQuery has been included:</p>
+					<p class="code">&lt;script type="application/javascript" src="/jslide.js"&gt;&lt;/script&gt;</p>
+					<p>Modify the <code>src</code> attribute so that it points to the file you downloaded above.</p>
+				</div>
+				<p><b>Step 3</b> - Setup slideshow</p>
+				<div class="indent">
+
+					<p>Create a <span class="code">&lt;div&gt;</span> with a unique id for the slideshow:</p>
+					
+					<p class="code">&lt;div id=&quot;slider_id&quot;&gt;&lt;/div&gt;</p>
+
+					<p>After the div, open a <span class="code">&lt;script&gt;</span> tag and call <span class="code">jslide('slider_id').setup();</span> where 'slider_id' is the unique id of the div above.</p>
+
+					<p>Optionally, inside the parenthesis of <span class="code">setup()</span>, insert a JavaScript object containing your settings preferences. See example below:</p>
+
+					
+					<div class="code">
+<p>
+&lt;script type=&quot;text/javascript&quot;&gt;<br />
+jslide('slider_1').setup({</p>
+<p style="margin-left:20px;">width: 800,<br />
+height: 200,<br />
+scale: 'fit',<br />
+speed: 1200,<br />
+autoplay: true,<br />
+images: [<br />
+<span style="margin-left:20px;">['images/01.jpg','caption 1'],</span><br />
+<span style="margin-left:20px;">['images/02.jpg','the second caption'],</span><br />
+<span style="margin-left:20px;">'images/03.jpg',</span><br />
+<span style="margin-left:20px;">['images/04.jpg','last caption']</span><br />
+],<br />
+<br />controls:{<br />
+<span style="margin-left:20px;">rounded: 10,</span><br />
+<span style="margin-left:20px;">height: 200,</span></span><br />
+<span style="margin-left:20px;">opacity:0.8</span><br />
+},<br />
+<br />captions: {<br />
+<span style="margin-left:20px;">background:'blue',</span><br />
+<span style="margin-left:20px;">position: 'top',</span><br />
+<span style="margin-left:20px;">width: '500',</span><br />
+<span style="margin-left:20px;">rounded: 10,</span><br />
+<span style="margin-left:20px;">align: 'right'</span><br />
+}</p><p>
+});<br />
+&lt;/script&gt;
+					</p></div>
+				</div>
+
+
+					<h1><a name="settings"></a>Settings</h1>
+					<p>The following settings should be inserted into a JavaScript object and used when calling <span class="code">setup()</span> (see <a href="#install">Install</a> above). Any combination of settings can be used&mdash;the default for a particular setting will be used if that setting is not specified.</p>
+		<table class="grid">
+			<tr><th>Field</th><th>Description</th><th>Values</th><th>Examples</th><th>Default</th></tr>
+<tr><td>images</td><td>an array of images to use in the slideshow. <br />Each element should be either a path to an image or an array in the form of [path, caption]</td><td></td><td></td><td></td></tr>
+<tr><td>width</td><td>width of the slideshow container</td><td>integer<br />pixel value<br />percent</td><td>800<br />"800px"<br />"50%"</td><td>"100%"</td></tr>
+<tr><td>height</td><td>height of the slideshow container</td><td>integer<br />pixel value</td><td>400<br />"400px"</td><td>change height dynamically with images</td></tr>
+<tr><td>scale</td><td>how smaller images are handled.</td><td>"fill"<br />enlarge each image to completely fill the slideshow container, even if some of it is cut off<br/><br/>"fit"<br />enlarge smaller images so that they touch the slideshow container on two sides<br /><br />"none"<br />do not enlarge any images.<br /><br />(Images will always be shrunk if they are larger than the slideshow container)</td><td></td><td>"none"</td></tr>
+<tr><td>background</td><td>background color of the slideshow container</td><td>css color value<br />"none"</td><td>"black"<br />"#000000"<br />"none"</td><td>"none"</td></tr>
+<tr><td>click</td><td>defines the click areas that control slideshow movement</td><td>false<br />clicking on the image will be disabled<br /><br />integer or pixel value<br />the boundary between left and right will be placed this many pixels from the left<br /><br />percent<br />the boundary between left and right will be placed this far across the container from left to right</td><td>false<br />200 or "200px"<br />"50%"</td><td>150 or 25%, whichever is smaller</td></tr>
+<tr><td>speed</td><td>the number of milliseconds spent on each image during playback</td><td>integer</td><td>5000</td><td>5000</td></tr>
+<tr><td>transition</td><td>the number of milliseconds taken by transitions</td><td>integer</td><td>400</td><td>400</td></tr>
+<tr><td>fade</td><td>enable fading between images</td><td>true or false</td><td></td><td>true</td></tr>
+<tr><td>slide</td><td>enable sliding between images</td><td></td><td></td><td>true</td></tr>
+<tr><td>autoplay</td><td>the slideshow will start automatically on pageload</td><td>true or false</td><td></td><td>false</td></tr>
+<tr><td>loop</td><td>enable looping from the last image to the first image</td><td>true or false</td><td></td><td>true</td></tr>
+
+
+		</table>
+
+<h2 class="space_top">Controls</h2>
+<p class="space_bottom">The following settings should be within the <b>controls</b> object in the main settings object.</p>
+
+<table class="grid">
+	<tr><th>Field</th><th>Description</th><th>Values</th><th>Examples</th><th>Default</th></tr>
+<tr><td>disabled</td><td>disable left/right controls for the whole slideshow</td><td>true or false</td><td></td><td>false</td></tr>
+<tr><td>height</td><td>height of each control button</td><td>integer<br />pixel value</td><td>100<br />"100px"</td><td>100</td></tr>
+<tr><td>width</td><td>width of each control button</td><td>integer<br />pixel value</td><td>46<br />"46px"</td><td>46</td></tr>
+<tr><td>background</td><td>background color of the control buttons</td><td>css color value</td><td>"black"<br />"#000000"</td><td>"black"</td></tr>
+<tr><td>opacity</td><td>opacity of the control buttons</td><td>decimal value between 0 and 1</td><td>0<br />1<br />0.5</td><td>0.5</td></tr>
+<tr><td>rounded</td><td>amount to round corners of control buttons</td><td>integer<br />pixel value</td><td>5<br />"5px"</td><td>0 (corners not rounded)</td></tr>
+
+
+</table>
+
+<h2 class="space_top">Captions</h2>
+<p class="space_bottom">The following settings should be within the <b>captions</b> object in the main settings object.</p>
+
+<table class="grid">
+	<tr><th>Field</th><th>Description</th><th>Values</th><th>Examples</th><th>Default</th></tr>
+<tr><td>disabled</td><td>disable captions for the whole slideshow</td><td>true or false</td><td></td><td>false</td></tr>
+<tr><td>position</td><td>vertical position of captions</td><td>"top" or "bottom"</td><td></td><td>"bottom"</td></tr>
+<tr><td>align</td><td>horizontal position of captions</td><td>"left", "right", or "center"</td><td></td><td>"center"</td></tr>
+<tr><td>text_align</td><td>alignment of text within caption box</td><td>"left", "right", or "center"</td><td></td><td>"center"</td></tr>
+<tr><td>size</td><td>caption text size</td><td>integer<br />point value</td><td>14<br />"14pt"</td><td>"medium"</td></tr>
+<tr><td>padding</td><td>padding around text in caption box</td><td>integer<br />pixel value</td><td>8<br />"8px"</td><td>8</td></tr>
+<tr><td>width</td><td>width of caption box</td><td>integer<br />pixel value<br />percent</td><td>800<br />"800px"<br/>"75%"</td><td>"100%"</td></tr>
+<tr><td>shrink_width</td><td>caption box will be shrunk to fit text, down to a minimum of this size</td><td>integer<br />pixel value<br />percent</td><td>200<br />"200px"<br />"30%"</td><td>same as width (no shrinking)</td></tr>
+<tr><td>color</td><td>color of caption text</td><td>css color value</td><td>"lightskyblue"<br />"#87CEFA"</td><td>"white"</td></tr>
+<tr><td>background</td><td>background color of caption box</td><td>css color value</td><td>"black"<br />"#000000"</td><td>"black"</td></tr>
+<tr><td>opacity</td><td>opacity of caption box</td><td>decimal value between 0 and 1</td><td>0<br />1<br />0.5</td><td>0.5</td></tr>
+<tr><td>rounded</td><td>amount to round corners of caption box</td><td>integer<br />pixel value</td><td>5<br />"5px"</td><td>0 (corners not rounded)</td></tr>
+
+</table>
+
+<h1><a name="api"></a>API</h1>
+<p>You can make external JavaScript calls to the slideshow.</p>
+<table class="grid">
+<tr><th>Call</th><th>Description</th></tr>
+<tr><td><span class="code">jslide('slider_id').moveImage(1);</span></td><td>Move to the next image</td></tr>
+<tr><td><span class="code">jslide('slider_id').moveImage(-1);</span></td><td>Move to the previous image</td></tr>
+</table>
+<p>More API calls coming soon.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div>
+
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/1.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/2.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/3.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/4.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/5.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/6.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/7.jpg')"></div>
+<div style="position:absolute;top:-9999px;left:-9999px;width:400px;height:400px;background-image:url('./images/8.jpg')"></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400);
+*{font-family:'Roboto Condensed',Arial,Helvetica,sans-serif; margin:0; padding:0; border:0;}
+body{background-color: #D9E4F4;}
+a{color:black;text-decoration:none;cursor:pointer;}
+#page_wrap{text-align:center;}
+#body_wrap{width:1024px;margin:auto;}
+#body_frame{margin:0 10px 10px 10px; text-align:left;background-color: white;border:1px solid #89AFAF; border-radius: 2px;box-shadow: 0 0 1px 1px #B0D4ED;padding:0 20px 20px 20px;}
+#menu{background-color:#264B77;margin-bottom:20px;padding:6px;border-radius:0 0 2px 2px;}
+
+#menu ul {list-style-type: none;}
+#menu ul li {display:inline-block;}
+#menu a {color:#C7D3E0;padding:6px 20px;}
+#menu a.selected {color:white;background-color:#4B7DB7;}
+#menu a:hover {color:white;}
+
+a.fade{opacity:.8;}
+a.fade:hover{opacity:1;}
+
+#title_wrap{text-align:left;padding:20px 20px 10px 20px;}
+#title{font-weight:bold;font-size:30pt;color:#264B77;}
+#subtitle{font-size:12pt;margin-left:40px;}
+
+
+#content{font-weight: lighter;}
+#content p:not(.lean){margin:10px 0;}
+#content p.lean_top{margin:0 0 10px 0;}
+#content p.lean_bottom{margin:10px 0 0 0;}
+
+.box_wrap{background-color:#F7F7F7;padding:18px;border:1px solid #EAEAEA;border-radius:2px;}
+#content img.box_wrap{margin:20px;}
+
+#content .float_left, #content img.float_left{display:inline-block;float:left;margin:20px 20px 20px 0;}
+#content .float_right, #content img.float_right{display:inline-block;float:right;margin:20px 0 20px 20px;}
+
+
+h1{font-size:20pt;margin:20px 0 10px 0;}
+h2{font-size:18pt;margin:20px 0 10px 0;font-weight:normal;}
+
+.bigger{font-size:1.2em;}
+
+.space_top{margin-top:10px !important;}
+.space_bottom{margin-bottom:10px;}
+
+table.grid {width:100%;border-collapse: collapse;size:12pt;border-radius:2px;}
+table.grid th{font-weight:bold; background-color:#cccccc;}
+table.grid td, table.grid th{border:1px black solid;padding:10px;border-color:#cccccc;vertical-align:top;}
+
+.code{background-color:#eaeaea;font-size:80%;padding:5px;}
+.code, .code * {font-family:'Courier New',Courier,sans-serif;}
+div.code p {margin-top:0 !important;margin-bottom:0 !important;}
+
+div.indent{margin-left:20px;}
+
+a.button{border:1px #cccccc solid;padding:5px;}
+a.button:hover{background-color:#eaeaea}

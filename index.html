@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="description" content="The slideshow script that anyone can use." />
+    <meta name="keywords" content="images, slideshow, javascript, pictures, jquery, easy" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="shortcut icon" href="/icon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css.css" />
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="application/javascript" src="/jslide.js"></script>
+	<script type="application/javascript" src="/js.js"></script>
+    <title>jSlide - javascript image viewer and slideshow</title>
+	<script type="application/javascript" src="/ga.js"></script>
+  </head>
+<body>
+
+<div id="wrap">
+<div id="innerwrap">
+<div id="sidebar">
+
+<p id="title"><a href="/">jSlide</a> <span class="tiny gray tmleft">BETA</span></p>
+<p id="subtitle">javascript image viewer</p>
+
+<div id="menu">
+<ul>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#support">Support & Feedback</a></li>
+</ul>
+</div>
+
+</div>
+<div id="main">
+
+<p class="padtop">
+
+<p class="orange" style="font-size:18pt;">The slideshow script that anyone can use.</p>
+
+<p style="margin-top:20px;"><span style="color:white;font-size:120%;">jSlide</span> is a lightweight script that displays image slideshows directly on your existing web page with virtually no assembly required.</p>
+
+<p class="head1"><a class="anchor" name="demo">Demo</a></p>
+
+<p class="head2">Single Images</p>
+
+<a href="/images/01.jpg" title="Each image will be fully visible no matter the size of the browser window." rel="jslide"><img alt="Thumb" src="/images/small/01.jpg" class="thumb" /></a>
+<a href="/images/02.jpg" title="Click the link at top left or press Esc to close." rel="jslide"><img alt="Thumb" src="/images/small/02.jpg" class="thumb" /></a>
+
+<p class="head2">Image Set</p>
+
+<p><a rel="jslide[slides]">Start Slide Show &raquo;</a></p>
+
+<a href="/images/03.jpg" title="Click the buttons at top to move between images." rel="jslide[slides]"><img alt="Thumb" src="/images/small/03.jpg" class="thumb" /></a>
+<a href="/images/04.jpg" title="You can also use the left and right arrow keys." rel="jslide[slides]"><img alt="Thumb" src="/images/small/04.jpg" class="thumb" /></a>
+<a href="/images/06.jpg" title="Press the spacebar to play/pause the slideshow." rel="jslide[slides]"><img alt="Thumb" src="/images/small/06.jpg" class="thumb" /></a>
+<a href="/images/08.jpg" title="Colors, button labels, font size, animations, and slideshow speed can be customized." rel="jslide[slides]"><img alt="Thumb" src="/images/small/08.jpg" class="thumb" /></a>
+<a href="/images/09.jpg" title="Press Esc to close." rel="jslide[slides]"><img alt="Thumb" src="/images/small/09.jpg" class="thumb" /></a>
+
+<p class="head1"><a class="anchor" name="features">Features</a> <a class="smalllink hidden" id="morefeatures">View details &raquo;</a></p>
+<ul id="featurelist">
+	<li>Easy to install
+	<p class="sub hide">jSlide is installed with one simple file&mdash;<code>jslide.js</code>&mdash;and just one line to add to the <code>&lt;head&gt;</code> tag of your page. There are no directories or tiny images to upload.</p>
+	</li>
+	<li>Clean display, unobtrusive transitions
+	<p class="sub hide">Slides fill the window and cannot be scrolled out of view. There's no waiting for long or distracting animations. Captions fade in with images. During a slideshow, the timer is restarted when the image changes, so manually browsing pictures during a slideshow works seamlessly.</p>
+	</li>
+	<li>Supports captions and multiple image sets
+	<p class="sub hide">Image sources and caption data are set in your HTML page&mdash;no need to edit long Javascript arrays.</p>
+	</li>
+	<li>Direct links to images
+	<p class="sub hide">Copy the URL in the address bar at any time&mdash;it will point to the current image in the slideshow.</p>
+	</li>
+	<li>Slideshow with keyboard controls
+	<p class="sub hide">Use the arrow keys to move between images, space to play/pause, and Esc to close.</p>
+	</li>
+	<li>Smart, efficient image preloading
+	<p class="sub hide">Images are preloaded using CSS in the direction in which a user is viewing an image set. You can customize how far ahead images are preloaded.</p>
+	</li>
+	<li>Fully customizable
+	<p class="sub hide">Easily turn on/off nearly any feature, and set everything from slide duration and animation speed to colors and the text on buttons.</p>
+	</li>
+	<li>Works on all web pages
+	<p class="sub hide">The script does not conflict with other scripts, and automatically uses HTML <code>class</code>es and <code>id</code>s that do not exist in your web page.</p>
+	</li>
+	<li class="hide">Graceful degradation
+	<p class="sub">If a user does not have Javascript, images will simply open on a new page. An elegant error message appears if a slide cannot be loaded.</p>
+	</li>
+</ul>
+
+<p class="head1"><a class="anchor" name="download">Download</a></p>
+<p>Only <span style="font-size:140%;color:white;font-weight:bold;">1</span> file to download! Upload this Javascript file to your server:</p>
+<p style="padding-top:10px;"><a class="button" href="jslide.js">jSlide v0.9.1</a> <span class="smalllink">JS file, 15.2 KB</span></p>
+<p class="smalllink">Click the above file to copy the text directly, or right-click and choose "Save Link As..."</p>
+
+<p class="head2">Changelog</p>
+<p>
+<table class="padding">
+<tr><td>v0.9.1</td><td>2/28/12</td><td>Added option to start slideshow automatically when launch button is clicked</td></tr>
+</table>
+</p>
+
+<p class="head1"><a class="anchor" name="setup">Setup</a></p>
+
+<ol>
+
+<li>
+<p class="head2">Include jQuery</p>
+<div class="section">
+<p>jSlide requires jQuery to run. If you don't already have jQuery on your page, include the following line in the <code>&lt;head&gt;</code> tag:</p>
+<p class="code">&lt;script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;</p>
+<p>jSlide has been tested to work with jQuery 1.7.1.</p>
+</div>
+</li>
+
+<li>
+<p class="head2">Include jSlide</p>
+<div class="section">
+<p>Include the following line in the <code>&lt;head&gt;</code> tag of your page, <em>after</em> jQuery has been included:</p>
+<p class="code">&lt;script type="application/javascript" src="/jslide.js"&gt;&lt;/script&gt;</p>
+<p>Modify the <code>src</code> attribute so that it points to the file you downloaded above.</p>
+</div>
+</li>
+
+<li>
+<p class="head2">Activate jSlide</p>
+
+<div class="section">
+<p class="head3">Single Images</p>
+<p>Add <code>rel="jslide"</code> to link tags on your page to activate jSlide:</p>
+<p class="code">&lt;a href="image1.jpg" rel="jslide" &gt;image #1&lt;/a&gt; <span class="comment">&lt;!-- image1.jpg will be displayed when "image #1" is clicked --&gt;</span></p>
+<p>To use a thumbnail image:</p>
+<p class="code">&lt;a href="image1.jpg" rel="jslide" &gt;&lt;img src="thumb1.jpg" /&gt;&lt;/a&gt; <span class="comment">&lt;-- image1.jpg will be displayed when thumb1.jpg is clicked. --&gt;</span></p>
+<p>Both the attribute (can be something other than <code>rel</code>) and the content of the attribute (can be something other than <code>jslide</code>) can be customized in <code>jslide.js</code>.</p>
+</div>
+
+<div class="section">
+<p class="head3">Captions</p>
+<p>Add a <code>title</code> attribute to set captions, or a <code>caption</code> attribute if you don't want the captions to appear as tooltips when you hover over the link.</p>
+
+<p class="code">&lt;a href="image1.jpg" title="description of picture" rel="jslide" &gt;image #1&lt;/a&gt; <span class="comment">&lt;!-- "description of picture" will appear in the slideshow as the caption for this image. --&gt;</span></p>
+</div>
+<div class="section">
+<p class="head3">Image Groups</p>
+<p>If you have a group of images that you want to be part of the same slideshow, add square brackets in the <code>rel</code> attribute with a group name:</p>
+<p class="code">
+&lt;a href="image1.jpg" rel="jslide[concert]" &gt;image #1&lt;/a&gt;
+<br />
+&lt;a href="image2.jpg" rel="jslide[concert]" &gt;image #2&lt;/a&gt;
+<br />
+&lt;a href="image3.jpg" rel="jslide[concert]" &gt;image #3&lt;/a&gt;
+</p>
+
+<p>You can use any combination and number of single images and groups.</p>
+
+</div>
+<div class="section">
+<p class="head3">Launch Button</p>
+<p>Use a link without a <code>href</code> attribute to open the first image.</p>
+<p class="code">
+&lt;a rel="jslide[concert]" &gt;Start Slide Show&lt;/a&gt;
+</p>
+
+<p>You can customize whether to automatically start playing the slideshow when this link is clicked.</p>
+
+</div>
+
+</li>
+
+<li>
+<p class="head2">Customize</p>
+<p>A set of easily-editable Javascript variables can be found at the top of <code>jslide.js</code>, along with specific instructions on how to change settings. The following are just some of the features that can be customized:</p>
+<div class="section">
+<p class="head3">Features</p>
+<p>These settings can be switched on or off.</p>
+<ul class="small">
+<li>Whether clicking an image moves to next slide</li>
+<li>Whether the arrow keys can be used to move between images</li>
+<li>Whether the Esc button exits slide view</li>
+<li class="hidden morelink"><a>...</a></li>
+<li class="hide">Whether the spacebar toggles a slideshow</li>
+<li class="hide">Whether the page automatically scrolls to the thumbnail/link of the last viewed slide when exiting slide view</li>
+<li class="hide">Whether timed slideshows are enabled</li>
+<li class="hide">Whether an animated progress bar appears next to the Play/Pause button during a slideshow</li>
+<li class="hide">Whether captions are shown above the image, below the image, or not at all</li>
+<li class="hide">Whether the address bar changes while viewing images (allowing direct links to specific images)</li>
+<li class="hide">Whether small images are stretched to fill the entire screen.</li>
+<li class="hide">Whether clicking blank space around the image closes slide view.</li>
+<li class="hide">Whether clicking directly on a single image or the last image in a set closes slide view</li>
+<li class="hide">Whether the slideshow loops around while viewing image sets and during slideshows</li>
+</ul>
+</div>
+
+<div class="section">
+<p class="head3">Slideshow Settings</p>
+<p></p>
+<ul class="small">
+<li>Time it takes images to fade in</li>
+<li>Time spent on each image in timed slideshows</li>
+<li>How far ahead images are preloaded during slideshows</li>
+</ul>
+</div>
+
+
+</li>
+</ol>
+
+<p class="head1"><a class="anchor" name="support">Support & Feedback</a></p>
+<ul>
+<li>Help using the script</li>
+<li>Bug reports</li>
+<li>Comments and suggestions</li>
+</ul>
+
+<form method="post" action="/scripts/feedback.php">
+
+<table>
+<tr><td>Email Address<br /><span class="tiny gray">(no spam)</span></td><td><input type="text" name="email" /></td></tr>
+<tr><td>Message</td><td><textarea name="content"></textarea></td></tr>
+<tr><td></td><td>
+<input type="submit" value="Send" />
+</td></tr>
+</table>
+</form>
+
+<p class="padtop">Alternatively, you can email me at <a href="mailto:info@jslide.com">info@jslide.com</a></p>
+
+<p class="padtop"><em>Enjoy!</em> <span style="margin-left:40px;">&mdash; Cooper Labinger</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>
