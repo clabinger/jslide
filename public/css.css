@@ -1,5 +1,6 @@
 *{margin:0;padding:0;border:0;text-decoration:none;font-weight:normal;font-family:'Lucida Grande','Lucida Sans Unicode',Verdana,sans-serif;}
 b, strong {font-weight:bold;}
+a.text-link {text-decoration:underline;}
 a:not(.anchor){cursor:pointer;color:white;}
 p{margin-bottom:10px;}
 p.padtop{padding-top:25px;}
