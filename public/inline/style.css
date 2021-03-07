@@ -2,6 +2,7 @@
 *{font-family:'Roboto Condensed',Arial,Helvetica,sans-serif; margin:0; padding:0; border:0;}
 body{background-color: #D9E4F4;}
 a{color:black;text-decoration:none;cursor:pointer;}
+a.text-link{text-decoration:underline;}
 #page_wrap{text-align:center;}
 #body_wrap{width:1024px;margin:auto;}
 #body_frame{margin:0 10px 10px 10px; text-align:left;background-color: white;border:1px solid #89AFAF; border-radius: 2px;box-shadow: 0 0 1px 1px #B0D4ED;padding:0 20px 20px 20px;}
